@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chuyển đổi tên Việt sang Nhật</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="logo">カ</div>
+      <div>
+        <h1>Chuyển đổi tên tiếng VIỆT sang tiếng NHẬT bảng Katakana</h1>
+        <div class="sub">Nhập tên (tiếng Việt có dấu hoặc không dấu) → bấm <b>Dịch</b> để dịch sang tên tiếng Nhật.</div>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="row">
+        <label for="name">Tên gốc</label>
+        <div class="input-wrap">
+          <input id="name" type="text" placeholder="Ví dụ: Phát, Nguyen, Sakura" />
+          <button id="btnTranslate">Dịch</button>
+          <button id="btnClear" class="secondary" title="Xóa">Xóa</button>
+        </div>
+        <div class="tools">
+		  
+		  <input id="apiKey" type="password" placeholder="Nhập OpenAI API Key" 
+				 style="flex:1;padding:8px;border-radius:8px;
+						border:1px solid #273867;background:#0b132b;color:#eaf2ff;">
+		  <select id="modelSelect" style="padding:8px;border-radius:8px;
+						border:1px solid #273867;background:#0b132b;color:#eaf2ff;">
+			<option value="gpt-4o-mini">GPT-4o Mini</option>
+			<option value="gpt-4">GPT-4</option>
+			<option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+		  </select>
+		  <button id="btnChatGPT" class="secondary">Dịch bằng ChatGPT</button>
+		
+
+          <label class="pill"><input id="auto" type="checkbox" style="accent-color:#6ea8fe;margin:0 6px 0 0;"/> Tự dịch khi gõ</label>
+          
+        </div>
+      </div>
+
+      <div class="row">
+        <label>Kết quả Katakana</label>
+        <div id="out" class="out" aria-live="polite"></div>
+        <div class="tools">
+          <button id="btnCopy" class="secondary">Sao chép</button>
+          <span id="status" class="muted"></span>
+        </div>
+      </div>
+
+     
+
+    </div>
+
+    <footer>
+      
+	  <span class="muted"></span>
+	  
+	  <span class="mono">Thiết kế bởi Trần Thành Phát</span>	
+    </footer>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

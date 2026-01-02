@@ -1,0 +1,121 @@
+    :root {
+      --bg: #0b1020;
+      --card: #121932;
+      --muted: #93a4bf;
+      --text: #e6ecff;
+      --accent: #6ea8fe;
+      --accent-2: #8ef0c0;
+      --danger: #ff6b6b;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 100% -10%, #1a2a6c33, transparent),
+                  radial-gradient(1200px 800px at -10% 120%, #00c9ff22, transparent), var(--bg);
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .app {
+      width: 100%;
+      max-width: 880px;
+      background: linear-gradient(180deg, #16234a 0%, #0e1530 100%);
+      border: 1px solid #2a3b74;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px #0008, inset 0 1px 0 #ffffff0d;
+      overflow: hidden;
+    }
+    header {
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid #223061;
+      background: linear-gradient(180deg, #0f1733 0%, #0c142b 100%);
+    }
+    .logo {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: conic-gradient(from 200deg, var(--accent), var(--accent-2));
+      display: grid; place-items: center;
+      color: #0b1020; font-weight: 900;
+      box-shadow: 0 6px 18px #6ea8fe55;
+    }
+    h1 { font-size: 18px; margin: 0; letter-spacing: 0.3px; }
+    .sub { color: var(--muted); font-size: 12px; }
+
+    .content { padding: 24px; display: grid; gap: 18px; }
+    .row { display: grid; gap: 10px; }
+
+    label { font-size: 14px; color: #cfe3ff; }
+
+    .input-wrap {
+      display: flex; gap: 10px; align-items: stretch; width: 100%;
+    }
+    input[type="text"] {
+      flex: 1;
+      padding: 14px 14px;
+      background: #0b132b;
+      color: var(--text);
+      border: 1px solid #273867;
+      border-radius: 14px;
+      outline: none;
+      font-size: 16px;
+    }
+    input[type="text"]::placeholder { color: #8aa0c9; }
+
+    button {
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid #2b4b9a;
+      background: linear-gradient(180deg, #1b3a8a, #16357b);
+      color: #eaf2ff;
+      font-weight: 600; letter-spacing: .2px;
+      cursor: pointer;
+      transition: transform .08s ease, filter .2s ease, background .2s ease;
+      box-shadow: 0 8px 20px #193b7a55, inset 0 1px 0 #ffffff1a;
+      white-space: nowrap;
+    }
+    button:hover { filter: brightness(1.05); }
+    button:active { transform: translateY(1px) scale(.995); }
+    .secondary { background: #0d1b3e; border-color: #294178; }
+    .danger { background: linear-gradient(180deg, #9a1b1b, #7b1616); border-color: #743a3a; }
+
+    .pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 12px; border-radius: 999px;
+      background: #0b132b; border: 1px solid #2a3b74; color: #cfe3ff; font-size: 12px;
+    }
+
+    .out {
+      background: #0a1228;
+      border: 1px solid #21315e;
+      border-radius: 16px;
+      padding: 18px;
+      min-height: 76px;
+      display: grid;
+      align-items: center;
+      font-size: 32px;
+      line-height: 1.3;
+      letter-spacing: .04em;
+      word-break: break-word;
+    }
+
+    .tools { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .muted { color: var(--muted); font-size: 13px; }
+
+    .examples {
+      display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    }
+    .ex {
+      background: #0b132b; border: 1px solid #263765; border-radius: 12px; padding: 10px 12px;
+      cursor: pointer; transition: background .15s ease, border-color .15s ease;
+    }
+    .ex:hover { background: #0e1835; border-color: #2d4c93; }
+    .ex b { display: block; font-size: 13px; margin-bottom: 4px; color: #e2ecff; }
+    .ex span { color: #9ab0d8; font-size: 12px; }
+
+    footer { padding: 16px 24px; border-top: 1px solid #223061; color: #a9bbdc; font-size: 12px; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
