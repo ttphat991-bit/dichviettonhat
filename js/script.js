@@ -103,6 +103,7 @@
 		['y',  'イー'],
 		['thi',  'ティ'],
 		['phat',  'ファット'],
+		['khuyen',  'クエン'],
 		
 	]);
 
@@ -345,5 +346,6 @@
     document.getElementById("out").textContent = "⚠️ Lỗi khi gọi API.";
   }
 }
+
 
 document.getElementById("btnChatGPT").addEventListener("click", translateWithChatGPT);
